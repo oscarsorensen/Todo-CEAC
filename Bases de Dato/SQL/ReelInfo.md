@@ -1,5 +1,5 @@
 
-terminal
+Open terminal in virtulbox iwth ubunto
 
 
 sudo mysql

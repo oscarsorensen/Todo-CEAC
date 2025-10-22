@@ -1,9 +1,0 @@
-<script>
-	//variables
-	
-	var edad = 44;
-	console.log("Mi edad es de ",edad, "años");	
-	var edad = 24;
-	console.log("Mi edad es de ",edad, "años");	
-	
-</script>

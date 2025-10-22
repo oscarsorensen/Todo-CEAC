@@ -1,4 +1,0 @@
-<script>
-	var fetcha = new Date();
-	console.log(fecha);
-</script>

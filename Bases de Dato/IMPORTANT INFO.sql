@@ -1,7 +1,11 @@
 
+----- NY UBUNTU KODE ER 1234 ---------
 
 -- ✅ ACCESS AND SETUP
 sudo mysql -u root -p;
+
+-- show database
+show databases;
 
 -- Select database
 USE empresadam;

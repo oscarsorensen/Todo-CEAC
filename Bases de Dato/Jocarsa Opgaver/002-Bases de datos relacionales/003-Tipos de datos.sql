@@ -4,21 +4,21 @@ En este ejercicio, actúo como cliente de una empresa llamada Empresadam, que ha
  
 Para resolver este ejercicio, empiezo creando una base de datos llamada Empresadam.
 Dentro de ella, creo una tabla llamada clientes con los siguientes campos y restricciones:
-```dni ->tipo VARCHAR(9)```, clave primaria que identifica de forma única a cada cliente.
+dni ->tipo VARCHAR(9), clave primaria que identifica de forma única a cada cliente.
 
 
 
-```nombre -> tipo VARCHAR(50), ```campo obligatorio para los nombres. 
-```apellidos -> tipo VARCHAR(255),``` campo obligatorio para los apellidos. 
-```email -> tipo VARCHAR(100), ```campo obligatorio y único para evitar duplicados. 
+nombre -> tipo VARCHAR(50), campo obligatorio para los nombres. 
+apellidos -> tipo VARCHAR(255), campo obligatorio para los apellidos. 
+email -> tipo VARCHAR(100), campo obligatorio y único para evitar duplicados. 
 
 Cada campo se ha definido con su tipo de dato correspondiente y las restricciones necesarias para mantener la integridad de los datos.
 Luego utilizo la siguiente sentencia SQL para insertar los datos proporcionados en la tarea: 
-```INSERT INTO clientes (dni, nombre, apellidos, email) VALUES ('12345678A', 'Jose Vicente', 'Carratala Sanchis', 'info@jocarsa.com'); ```
-Finalmente, utilizo una sentencia SELECT para mostrar todos los datos almacenados: -- Consultar todos los registros de la tabla clientes``` SELECT * FROM clientes; ```-- Mostrar todos los registros de la tabla clientes
+INSERT INTO clientes (dni, nombre, apellidos, email) VALUES ('12345678A', 'Jose Vicente', 'Carratala Sanchis', 'info@jocarsa.com'); 
+Finalmente, utilizo una sentencia SELECT para mostrar todos los datos almacenados: -- Consultar todos los registros de la tabla clientes SELECT * FROM clientes; -- Mostrar todos los registros de la tabla clientes
 
 
-```
+
 sudo mysql -u root -p -- Acceso a MySQL como usuario root
 
 CREATE DATABASE Empresadam; -- Crear la base de datos Empresadam
@@ -39,7 +39,7 @@ INSERT INTO clientes (dni, nombre, apellidos, email) values ('12345678A', 'Jose 
 
 -- Consultar todos los registros de la tabla clientes
 SELECT * FROM clientes; -- Mostrar todos los registros de la tabla clientes
-```
+
 
 A través de este ejercicio, utilizo SQL para crear y gestionar tablas dentro de una base de datos.
 La creación de la base de datos Empresadam y la tabla de clientes muestra el uso de los comandos CREATE, INSERT y SELECT, que forman parte de las operaciones CRUD básicas.

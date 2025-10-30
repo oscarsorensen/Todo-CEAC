@@ -23,7 +23,7 @@ FROM clientes c
 JOIN sesiones s ON c.id = s.cliente_id;
 
 
-```
+
 
 sudo mysql -u root -p -- Acceso a MySQL como usuario root
 
@@ -58,6 +58,6 @@ SELECT c.id, c.nombre, c.edad, c.peso_inicial, c.objetivo, s.fecha, s.duracion
 FROM clientes c
 JOIN sesiones s ON c.id = s.cliente_id; -- Consultar datos combinados de clientes y sesiones
 
-```
+
 
 Esta actividad me ha permitido comprender cómo se crean y gestionan bases de datos relacionales en MySQL. He aprendido a definir tablas relacionadas mediante claves primarias y foráneas, así como a insertar y consultar datos de forma estructurada. Este tipo de base de datos puede aplicarse fácilmente en un entorno real, como un gimnasio, donde es necesario registrar la información de los clientes y hacer un seguimiento de sus sesiones de entrenamiento. Además, este ejercicio refuerza los conocimientos adquiridos en la unidad sobre la organización y gestión eficiente de la información.

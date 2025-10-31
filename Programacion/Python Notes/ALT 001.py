@@ -34,7 +34,7 @@ user_name = "oscar_sorensen"
 
 
 # ---------- 3) DATA TYPES ----------
-n_int = 7                     # int
+n_int = 7                     # int - int is short for integer (whole number)
 n_float = 2.5                 # float
 text = "text"                 # str
 flag = False                  # bool

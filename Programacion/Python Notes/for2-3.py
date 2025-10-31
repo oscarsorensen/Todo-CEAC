@@ -87,7 +87,7 @@ print("Uppercase:", text.upper())
 print("Replace:", text.replace("world", "Oscar"))
 
 nums = [3, 1, 2]
-nums.append(4)
+nums.append(4) # add element- here 4
 nums.sort()
 print("List:", nums)
 

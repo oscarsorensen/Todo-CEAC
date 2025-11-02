@@ -22,7 +22,12 @@ c.show_info()
 
 
 # ---------- 2) LIST OF OBJECTS + CRUD MENU ----------
-clients = []                           # list to store objects
+clients = []                           # lista para guardar objetos
+
+class Client:
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
 
 def insert_client():
     name = input("Name: ")
@@ -31,11 +36,13 @@ def insert_client():
     print("Inserted.")
 
 def list_clients():
-    if not clients:
+    if len(clients) == 0: 
         print("No clients yet.")
         return
-    for i, c in enumerate(clients, start=1):
+    i = 1
+    for c in clients:
         print(i, c.name, c.email)
+        i = i + 1
 
 # Simple CRUD (Create, Read, Update, Delete) simulation
 while True:
@@ -49,6 +56,7 @@ while True:
         break
     else:
         print("Invalid option")
+
 
 
 # ---------- 3) PRIVATE ATTRIBUTES + GETTERS/SETTERS ----------

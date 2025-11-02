@@ -77,6 +77,37 @@ except FileNotFoundError:
         f.write("Created automatically.")
 
 
+# ---------- 5B) MÉTODOS ESTÁTICOS (static methods) ----------
+# Static methods belong to the class, not to individual objects.
+
+class Entrenamiento:
+    @staticmethod
+    def calcular_puntuacion(series, repeticiones):
+        return series * repeticiones
+
+# Uso
+resultado = Entrenamiento.calcular_puntuacion(4, 10)
+print("Puntuación del entrenamiento:", resultado)
+
+# ---------- 5C) MENÚ CRUD SIMPLE ----------
+# Combine insert/list options inside a while-loop menu.
+
+while True:
+    print("\n1) Insertar cliente  2) Listar clientes  3) Salir")
+    opcion = input("> ")
+
+    if opcion == "1":
+        insert_client()
+    elif opcion == "2":
+        list_clients()
+    elif opcion == "3":
+        print("Programa finalizado.")
+        break
+    else:
+        print("Opción no válida.")
+
+
+
 # ---------- 6) EXAM TIPS ----------
 # - Know open() modes: r, w, a, rb, wb.
 # - Understand difference between text and binary files.

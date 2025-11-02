@@ -74,6 +74,22 @@ while True:
     except ValueError:
         print("Not a number. Try again.")
 
+# ---------- 6B) ASSERTIONS (aserciones) ----------
+# Used to verify that a condition is True during program execution.
+# If the condition is False, the program stops with an AssertionError.
+
+age = 25
+assert age > 0, "Age must be positive"
+print("Valid age:", age)
+
+# Example: Check that divisor is not zero before dividing.
+dividendo = 10
+divisor = 2
+assert divisor != 0, "Divisor cannot be zero"
+resultado = dividendo / divisor
+print("Resultado:", resultado)
+
+
 
 # ---------- 7) MINI PROJECT: HORSE STABLE PLANNER (planificador de cuadras) ----------
 # Example combining input, conditions, math, and date modules.
@@ -91,6 +107,50 @@ else:
     is_weekend = today.isoweekday() in (6, 7)   # 6=Saturday,7=Sunday
     print("Date:", today, "Weekend?", is_weekend)
     print("Stables needed:", stables_needed)
+
+# ---------- 7) MINI PROJECT: PLANIFICADOR DE CUADRAS ----------
+# Combines input, math, and datetime modules.
+
+import math
+import datetime
+
+print("\n--- PLANIFICADOR DE CUADRAS ---")
+horses = input("Introduce el número de caballos: ")
+
+try:
+    horses = int(horses)
+    if horses == 0:
+        print("No hay caballos, no se necesitan cuadras.")
+    else:
+        capacity = int(input("Capacidad de cada cuadra (caballos por cuadra): "))
+        stables_needed = math.ceil(horses / capacity)
+        today = datetime.date.today()
+        is_weekend = today.isoweekday() in (6, 7)   # 6 = sábado, 7 = domingo
+
+        print("Fecha:", today)
+        print("¿Fin de semana?", is_weekend)
+        print("Cuadras necesarias:", stables_needed)
+except ValueError:
+    print("Entrada no válida.")
+
+
+# ---------- EXTRA: División (operadores matemáticos) ----------
+# Dividendo: número que se divide.
+# Divisor: número por el que se divide el dividendo.
+# Cociente: resultado de la división.
+# Resto: parte sobrante si la división no es exacta.
+# Ejemplo: 20 ÷ 4 = 5 → dividendo=20, divisor=4, cociente=5, resto=0
+
+# --- Example in Python ---
+dividendo = 20
+divisor = 3
+cociente = dividendo // divisor      # división entera (integer division)
+resto = dividendo % divisor          # módulo, devuelve el resto
+
+print("Dividendo:", dividendo)
+print("Divisor:", divisor)
+print("Cociente:", cociente)
+print("Resto:", resto)
 
 
 # ---------- 8) EXAM TIPS ----------

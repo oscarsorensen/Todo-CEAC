@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>UNIT 005 — Reading and Writing Information (Lectura y escritura de información)</title>
+<style>body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:40px auto;line-height:1.45} pre,code{background:#f6f8fa;padding:8px;border-radius:6px;display:block;overflow:auto} h1,h2{margin:0.6em 0} ul{margin:0.3em 0 1em 1.2em}</style></head>
+<body>
+<h1>UNIT 005 — Reading and Writing Information <em>(Lectura y escritura de información, ficheros, pickle, binarios)</em></h1>
+<p>This unit explains how to read and write files, both text and binary, and how to save Python objects permanently.</p>
+<h2>Text files (archivos de texto)</h2>
+<pre><code># Write text
+with open("notes.txt", "w", encoding="utf-8") as f:
+    f.write("First line\nSecond line")
+
+# Read text
+with open("notes.txt", "r", encoding="utf-8") as f:
+    content = f.read()
+print(content)
+</code></pre>
+<h2>Appending data</h2>
+<pre><code>with open("notes.txt", "a", encoding="utf-8") as f:
+    f.write("\nAppended line")
+</code></pre>
+<h2>Binary files (pickle — binarios)</h2>
+<pre><code>import pickle
+
+data = ["Oscar", "CEAC", 2025]
+with open("data.bin", "wb") as f:
+    pickle.dump(data, f)
+
+# Read binary
+with open("data.bin", "rb") as f:
+    result = pickle.load(f)
+print(result)
+</code></pre>
+<h2>Exam focus</h2>
+<ul>
+<li>Use open(), write(), read() correctly</li>
+<li>Know difference between text (r/w/a) and binary (rb/wb)</li>
+<li>Show saving/loading objects with pickle</li>
+</ul>
+</body></html>

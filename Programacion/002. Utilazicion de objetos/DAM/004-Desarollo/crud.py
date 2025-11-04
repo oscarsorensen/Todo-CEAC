@@ -42,8 +42,10 @@ while True: #Esto deseta un bucle infinito pero controlado
 
     elif opcion == 2:
         print("Vamos a ver los clientes")
+        
     elif opcion == 3:
         print("Vamos a actualizat un cliente")
     elif opcion == 4:
         print("Vamos a eliminar un cliente")
         break
+

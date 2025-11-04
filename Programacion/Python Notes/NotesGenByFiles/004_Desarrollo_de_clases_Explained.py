@@ -59,7 +59,7 @@ while True:
 
 
 
-# ---------- 3) PRIVATE ATTRIBUTES + GETTERS/SETTERS ----------
+# ---------- 3) PRIVATE ATTRIBUTES + GETTERS ----------
 class BankAccount:
     def __init__(self):
         self._balance = 0.0            # underscore indicates internal use (privado)
@@ -79,6 +79,36 @@ acc = BankAccount()
 acc.deposit(100)
 acc.withdraw(40)
 print("Balance:", acc.get_balance())
+
+# ---------- PRIVATE ATTRIBUTES, GETTERS AND SETTERS ----------
+
+# In Python, attributes starting with "_" are considered internal (private use).
+# Getters and setters allow safe access and modification of those attributes.
+
+class BankAccount:
+def __init__(self):
+    self._balance = 0.0       # private attribute
+
+# Getter -> returns the value
+def get_balance(self):
+    return self._balance
+
+# Setter -> modifies the value with validation
+def set_balance(self, amount):
+    if amount >= 0:
+        self._balance = amount
+    else:
+        print("Invalid amount. Balance cannot be negative.")
+
+# Example of use
+account = BankAccount()
+account.set_balance(150)
+print("Balance:", account.get_balance())
+
+# Encapsulation principle:
+# Internal data (_balance) is not accessed directly from outside the class,
+# but through methods that control how it is read or changed.
+
 
 
 # ---------- 4) EXAM TIPS ----------

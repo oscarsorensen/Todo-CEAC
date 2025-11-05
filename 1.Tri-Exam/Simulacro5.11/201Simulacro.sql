@@ -1,4 +1,10 @@
+"En este ejercicio se diseña la base de datos de un portafolio digital, que servirá para almacenar información sobre las piezas o trabajos realizados por un autor.
+La finalidad es organizar los proyectos por categorías, de manera que cada pieza tenga su título, descripción, imagen y un enlace de referencia.
+El trabajo permite comprender cómo se relacionan las tablas mediante claves primarias y foráneas, y cómo usar vistas para simplificar consultas entre tablas relacionadas."
 
+"Se inicia el servicio de MySQL y se crea una base de datos llamada PortafolioDB. Dentro de ella se definen las entidades Categoria y Pieza. La tabla Categoria contiene los campos id, titulo y descripcion, con id como clave primaria. La tabla Pieza incluye id, titulo, descripcion, imagen, url y categoria_id, este último configurado como clave foránea que referencia a Categoria(id) con las acciones ON UPDATE CASCADE y ON DELETE RESTRICT.
+
+Después se realiza una consulta mediante LEFT JOIN entre Pieza y Categoria para combinar los datos de ambas tablas y mostrar las piezas junto a su categoría correspondiente. A continuación, se crea una vista denominada pieza_con_categoria basada en esa unión, lo que permite acceder fácilmente a la información combinada desde una sola estructura lógica."
 -- empezar mysql en terminal
 sudo mysql -u root -p;
 
@@ -55,3 +61,5 @@ SELECT database();
 -- Ver las vistas creadas
 
 SHOW FULL TABLES WHERE TABLE_TYPE = 'VIEW';
+
+"Este ejercicio me ha servido para reforzar mis conocimientos sobre cómo crear y relacionar tablas dentro de una base de datos relacional. Se ha demostrado la utilidad de las claves primarias y externas para mantener la integridad de los datos, así como el uso del comando JOIN para vincular información de diferentes tablas.La creación de la vista final que hago facilita el acceso a todos los datos combinados y muestra cómo aplicar estos conceptos en un proyecto real, como un portafolio web donde las piezas están organizadas por categorías."

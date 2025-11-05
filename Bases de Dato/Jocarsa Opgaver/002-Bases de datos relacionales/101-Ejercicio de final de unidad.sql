@@ -1,3 +1,18 @@
+En este proyecto diseño una pequeña base de datos relacional llamada biblioteca25, creada para gestionar las operaciones de una biblioteca.
+ Una base de datos relacional organiza la información en tablas que están conectadas mediante claves y relaciones. Cada tabla representa una entidad específica —por ejemplo, autores, libros, socios o préstamos—. Los vínculos entre ellas garantizan la coherencia lógica y la consistencia de los datos.
+El modelo relacional permite al sistema evitar duplicaciones, mantener la integridad y realizar consultas entre diferentes entidades de forma eficiente. En este proyecto, la base de datos demuestra estos principios al conectar las cuatro tablas (autores, libros, socios y préstamos) mediante claves foráneas y restricciones.
+ Esta estructura refleja cómo los sistemas de información reales gestionan las relaciones entre los datos, como qué autor escribió un libro, qué socio lo ha tomado prestado y cuándo fue devuelto.
+En conjunto, biblioteca25 muestra la aplicación práctica de la teoría de bases de datos relacionales en un contexto realista de biblioteca, asegurando organización, precisión e integridad en la información almacenada.
+
+
+Para construir esta base de datos utilicé comandos “SQL” estándar y seguí la lógica del diseño relacional.
+ Cada tabla tiene un ID autoincremental como clave principal, y los tipos de datos se eligieron según la información que se guarda: por ejemplo, “VARCHAR” para texto, “DECIMAL” para precios y “DATE” para fechas.
+En la tabla libros añadí una restricción “UNIQUE” en el “ISBN” para que no haya dos libros con el mismo código, y un “CHECK” que evita precios negativos.
+ En la tabla socios incluí una comprobación con expresión regular para asegurar que los correos electrónicos tengan un formato válido, y configuré la fecha actual como valor por defecto cuando se registra un nuevo socio.
+ Por último, la tabla préstamos conecta los socios y los libros mediante claves foráneas, y tiene otro “CHECK” que impide que una fecha de devolución sea anterior a la de préstamo.
+Verifiqué que todas las restricciones e índices funcionaran correctamente con los comandos “DESCRIBE y SHOW INDEX”. Todo se probó paso a paso hasta que el sistema funcionó como esperaba.
+
+
 --- Paso 1 -------------------------------------------------------------
 sudo mysql -u root -p
 
@@ -325,3 +340,8 @@ mysql> DESCRIBE socios;
 4 rows in set (0,00 sec)
 
 mysql> 
+
+La base de datos cumple con su objetivo: conecta todas las tablas de forma correcta y evita errores en los datos guardados.
+Gracias a las restricciones, las claves foráneas y los índices, los registros se mantienen coherentes y el acceso a la información es más rápido y seguro.
+Además, el diseño demuestra cómo una base de datos relacional puede organizar información real de manera clara y estructurada, aplicando reglas que garantizan la integridad de los datos.
+En resumen, biblioteca25 es un ejemplo sencillo pero completo de cómo se puede aplicar SQL para crear un sistema fiable, ordenado y fácil de mantener.

@@ -58,6 +58,15 @@ ON Pieza.categoria_id = Categoria.id;
 -- testear la vista
 
 use PortafolioDB;
+
+INSERT INTO Categoria (titulo, descripcion)
+VALUES ('Diseño Web', 'Proyectos web'), ('Programación', 'Aplicaciones backend');
+
+INSERT INTO Pieza (titulo, descripcion, imagen, categoria_id, url)
+VALUES 
+('Blog personal', 'Proyecto Flask con base de datos MySQL.', 'example.jpg', 1, 'https://example.com'),
+('Gestor de clientes', 'Aplicación CRUD creada en Python.', 'example.jpg', 2, 'https://example.com');
+
 SELECT database();
 
 -- Ver las vistas creadas

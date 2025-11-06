@@ -7,6 +7,8 @@ El trabajo permite comprender cómo se relacionan las tablas mediante claves pri
 Después se realiza una consulta mediante LEFT JOIN entre Pieza y Categoria para combinar los datos de ambas tablas y mostrar las piezas junto a su categoría correspondiente. A continuación, se crea una vista denominada pieza_con_categoria basada en esa unión, lo que permite acceder fácilmente a la información combinada desde una sola estructura lógica."
 -- empezar mysql en terminal
 sudo mysql -u root -p;
+ mysql -u useroscar -p
+
 
 show databases;
 -- Crear base de datos PortafolioDB

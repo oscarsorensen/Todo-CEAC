@@ -1,3 +1,11 @@
+
+"""
+Las clases en programación permiten organizar información y comportamientos dentro de una misma estructura. En este tema aprendo a representar objetos del mundo real —como clientes o cuentas bancarias— y a gestionarlos mediante propiedades y métodos, igual que en una aplicación real de gestión personal o profesional.
+
+Defino varias clases (Client, BankAccount) con el método __init__() y atributos bien estructurados.
+Implemento métodos que modifican y muestran la información (show_info, deposit, withdraw, get_balance, set_balance), aplicando el principio de encapsulación y un menú CRUD básico para practicar la manipulación de objetos.
+"""
+
 # Defino la clase Cliente (necesario antes de usar Cliente())
 class Cliente:
     def __init__(self):
@@ -57,3 +65,10 @@ while True:  # Esto desata un bucle infinito pero controlado
 
     else:
         print("Opción no válida, intenta otra vez")
+
+
+"""
+Este ejercicio demuestra cómo las clases permiten unir datos y acciones en un solo bloque lógico.
+Gracias a ello puedo crear aplicaciones más organizadas y reutilizables, comprendiendo cómo la programación orientada a objetos se aplica a casos reales como la gestión de clientes o cuentas.
+Del mismo modo, podría aplicar estos conceptos para desarrollar una aplicación que gestione mis rutinas de gimnasio o mis recetas de cocina, almacenando información y operaciones de forma estructurada y eficiente.
+"""

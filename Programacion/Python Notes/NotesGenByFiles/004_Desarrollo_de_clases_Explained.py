@@ -86,24 +86,26 @@ print("Balance:", acc.get_balance())
 # Getters and setters allow safe access and modification of those attributes.
 
 class BankAccount:
-def __init__(self):
-    self._balance = 0.0       # private attribute
+    def __init__(self):
+        self._balance = 0.0       # private attribute
 
-# Getter -> returns the value
-def get_balance(self):
-    return self._balance
+    # Getter -> returns the value
+    def get_balance(self):
+        return self._balance
 
-# Setter -> modifies the value with validation
-def set_balance(self, amount):
-    if amount >= 0:
-        self._balance = amount
-    else:
-        print("Invalid amount. Balance cannot be negative.")
+    # Setter -> modifies the value with validation
+    def set_balance(self, amount):
+        if amount >= 0:
+            self._balance = amount
+        else:
+            print("Invalid amount. Balance cannot be negative.")
+
 
 # Example of use
 account = BankAccount()
 account.set_balance(150)
 print("Balance:", account.get_balance())
+
 
 # Encapsulation principle:
 # Internal data (_balance) is not accessed directly from outside the class,

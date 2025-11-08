@@ -766,40 +766,45 @@ def open_or_create_demo():
 # __main__ — Uncomment what you want to test locally
 # ======================================================
 if __name__ == "__main__":
-    # SECTION 0
-    # file_basics_demo()
+    pass
+# --- Agenda ---
+# agenda_escribir_contacto()
+# agenda_leer_contactos()
 
-    # SECTION 1
-    # agenda_write_contact()
-    # agenda_read_all()
+# SECTION 0
+# file_basics_demo()
 
-    # SECTION 2
-    # blog_json_to_html()
+# SECTION 1
+# agenda_write_contact()
+# agenda_read_all()
 
-    # SECTION 3
-    # foods_write_and_append()
-    # foods_read_last_line()
-    # pickle_save_and_load_demo()
+# SECTION 2
+# blog_json_to_html()
 
-    # SECTION 4
-    # folder_size_megabytes()
-    # list_files_over_1gb()
+# SECTION 3
+# foods_write_and_append()
+# foods_read_last_line()
+# pickle_save_and_load_demo()
 
-    # SECTION 5
-    # create_and_delete_demo()
-    # zip_one_file("example.txt", "example.zip")  # ensure example.txt exists first
+# SECTION 4
+# folder_size_megabytes()
+# list_files_over_1gb()
 
-    # SECTION 6
-    # clients_menu()
+# SECTION 5
+# create_and_delete_demo()
+# zip_one_file("example.txt", "example.zip")  # ensure example.txt exists first
 
-    # SECTION 7
-    # tkinter_sum_demo()
+# SECTION 6
+# clients_menu()
 
-    # SECTION 8
-    # tkinter_mysql_insert_template()
+# SECTION 7
+# tkinter_sum_demo()
 
-    # SECTION 9
-    # print(EXAM_CRUD_SKETCH)
+# SECTION 8
+# tkinter_mysql_insert_template()
 
-    # SECTION 10
-    # open_or_create_demo()
+# SECTION 9
+# print(EXAM_CRUD_SKETCH)
+
+# SECTION 10
+# open_or_create_demo()

@@ -43,6 +43,9 @@ HOW TO USE THIS TEMPLATE (EXAM INSTRUCTIONS)
         border-radius: 10px;
         padding: 20px;
         line-height: 1.6;
+        display: flex;                  /* Flexbox */
+        flex-direction: column;         /* Vertical layout */
+        align-items: center;            /* Center contents */
       }
 
       header, footer {
@@ -50,6 +53,7 @@ HOW TO USE THIS TEMPLATE (EXAM INSTRUCTIONS)
         border-bottom: 1px solid #ccc;
         padding-bottom: 10px;
         margin-bottom: 20px;
+        width: 100%;
       }
 
       header h1 {
@@ -61,6 +65,19 @@ HOW TO USE THIS TEMPLATE (EXAM INSTRUCTIONS)
         margin: 0;
         font-size: 16px;
         color: #555;
+      }
+
+      main {
+        display: grid;                            /* Grid layout */
+        grid-template-columns: 1fr;               /* One column by default */
+        gap: 20px;                                /* Space between articles */
+        width: 100%;
+      }
+
+      @media (min-width: 800px) {
+        main {
+          grid-template-columns: 1fr 1fr;         /* Two columns on wider screens */
+        }
       }
 
       article {
@@ -88,6 +105,7 @@ HOW TO USE THIS TEMPLATE (EXAM INSTRUCTIONS)
         margin-top: 20px;
         font-size: 12px;
         color: #666;
+        width: 100%;
       }
     </style>
   </head>

@@ -1012,3 +1012,60 @@ connection.close()
 # UPDATE clients SET email='new@example.com' WHERE id=1;
 # DELETE FROM clients WHERE id=1;
 # ===========================================================
+
+
+--########################################################################################################
+-- =====================================================
+-- EXAMEN DE BASES DE DATOS — BLOG
+-- Autor: Oscar Sørensen
+-- =====================================================
+
+-- 1. Crear base de datos
+CREATE DATABASE blogdb;
+USE blogdb;
+
+-- 2. Crear tabla de autores
+CREATE TABLE autores (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100),
+  email VARCHAR(100)
+);
+
+-- 3. Crear tabla de entradas (noticias)
+CREATE TABLE entradas (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  titulo VARCHAR(200),
+  fecha DATE,
+  texto TEXT,
+  imagen VARCHAR(200),
+  autor_id INT,
+  FOREIGN KEY (autor_id) REFERENCES autores(id)
+);
+
+-- 4. Insertar algunos datos de prueba
+INSERT INTO autores (nombre, email) VALUES
+('Oscar Sørensen', 'oscar@example.com'),
+('José Vicente Carratalá', 'jvc@example.com');
+
+INSERT INTO entradas (titulo, fecha, texto, imagen, autor_id) VALUES
+('Primer post', '2025-11-09', 'Contenido del primer artículo.', 'example.jpg', 1),
+('Segundo post', '2025-11-09', 'Otra entrada con más texto.', 'example2.jpg', 2);
+
+-- 5. Crear LEFT JOIN para ver autores con sus entradas
+SELECT e.id, e.titulo, e.fecha, a.nombre AS autor
+FROM entradas e
+LEFT JOIN autores a ON e.autor_id = a.id;
+
+-- 6. Crear una vista combinando ambas tablas
+CREATE VIEW vista_blog AS
+SELECT e.titulo, e.fecha, e.texto, e.imagen, a.nombre AS autor
+FROM entradas e
+LEFT JOIN autores a ON e.autor_id = a.id;
+
+-- 7. Crear un usuario y asignar permisos
+CREATE USER 'userblog'@'localhost' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON blogdb.* TO 'userblog'@'localhost';
+FLUSH PRIVILEGES;
+
+-- 8. Comprobación rápida
+SELECT * FROM vista_blog;

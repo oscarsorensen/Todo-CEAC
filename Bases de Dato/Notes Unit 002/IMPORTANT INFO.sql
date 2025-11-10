@@ -3,6 +3,8 @@
 
 -- ✅ ACCESS AND SETUP
 sudo mysql -u root -p;
+sudo service mysql start
+mysql -u useroscar -p
 
 -- show database
 show databases;

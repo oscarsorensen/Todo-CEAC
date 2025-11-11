@@ -45,7 +45,7 @@ while True:
         title = input("Título: ")
         descripcion = input("Descripción: ")
         fecha = input("Fecha (YYYY-MM-DD): ")
-        categoria_id = input("ID de categoría (1, 2, 3...): ")
+        categoria_id = input("ID de categoría (1 (Fotografía), 2 (Diseño Gráfico), 3 (Desarrollo Web)): ")
         cursor.execute("""
         INSERT INTO piezasportafolio (title, descripcion, fecha, categoria_id)
         VALUES (%s, %s, %s, %s);
@@ -67,7 +67,7 @@ while True:
         title = input("Nuevo título: ")
         descripcion = input("Nueva descripción: ")
         fecha = input("Nueva fecha (YYYY-MM-DD): ")
-        categoria_id = input("Nuevo ID de categoría: ")
+        categoria_id = input("Nuevo ID de categoría (1 (Fotografía), 2 (Diseño Gráfico), 3 (Desarrollo Web): ")
         cursor.execute("""
         UPDATE piezasportafolio
         SET title = %s, descripcion = %s, fecha = %s, categoria_id = %s

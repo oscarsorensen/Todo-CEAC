@@ -2,7 +2,7 @@
 En este ejercicio, desarrollaré una mini aplicación de consola en Python que me permita gestionar datos de clientes mediante operaciones CRUD conectadas a mi base de datos MySQL; utilizaré la base de datos que creé en el examen de Bases de datos.El objetivo es practicar la interacción entre un programa Python y una base de datos real, aplicando instrucciones SQL básicas para crear, leer, actualizar y eliminar registros.Este ejercicio muestra cómo se combina la lógica de control (bucles y if-elif) con el uso de bibliotecas externas.La biblioteca mysql.connector se utiliza para establecer la conexión con MySQL, autenticándose con el usuario useroscar y la base de datos portafolioexamen.A continuación, se crea la tabla clients con su clave principal Identifier y los campos nombre, apellidos y correo electrónico.La aplicación muestra un mensaje de bienvenida y un menú de opciones numeradas del 1 al 5.Mediante un bucle while True, el usuario puede seleccionar la operación deseada y, dependiendo de la opción elegida, se ejecutan las sentencias SQL correspondientes:INSERT INTO para añadir un nuevo cliente.SELECT FROM para listar todos los registros.UPDATE SET WHERE para modificar los datos de un cliente específico.DELETE FROM para eliminar un registro por ID.Las decisiones se controlan con estructuras if-elif, y cada operación se confirma con connection.commit() para guardar los cambios en la base de datos.
 """
 
-import mysql.connector
+#import mysql.connector
 
 #usando useroscar porque es el usuario que tiene todo los permisos.
 # Connect to MySQL

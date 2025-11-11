@@ -46,15 +46,16 @@ INSERT INTO piezasportafolio (title, descripcion, fecha, categoria_id) VALUES
 ('Proyecto 3', 'Descripción del proyecto 3', '2023-03-10', 3);
 
 -- 5) Create a LEFT JOIN view (for verification or integration)
-CREATE OR REPLACE VIEW vista_piezasportafolio AS
+CREATE OR REPLACE VIEW piezasportafolio_con_categoriasportafolio AS
 SELECT 
-    p.id,
     p.title,
+    p.descripcion,
     p.fecha,
     c.name AS categoria_nombre
 FROM piezasportafolio p
 LEFT JOIN categoriasportafolio c
 ON p.categoria_id = c.id;
+
 
 -- 6) Create exam user with permissions (optional if already exists)
 CREATE USER IF NOT EXISTS 'useroscar'@'localhost' IDENTIFIED BY 'Oscar081100!';

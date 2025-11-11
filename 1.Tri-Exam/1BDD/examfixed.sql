@@ -60,11 +60,13 @@ ON p.categoria_id = c.id;
 CREATE OR REPLACE VIEW piezasportafolio_con_categoriasportafolio AS
 SELECT 
     p.title,
+    p.descripcion,
     p.fecha,
     c.name AS categoria_nombre
 FROM piezasportafolio p
 LEFT JOIN categoriasportafolio c
 ON p.categoria_id = c.id;
+
 
 -- 6) VERIFY VIEW
 SELECT * FROM piezasportafolio_con_categoriasportafolio;

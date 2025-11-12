@@ -3,9 +3,13 @@ En este proyecto uno los conocimientos de tres asignaturas: Bases de Datos, Prog
 para crear una pequeña aplicación web completa que muestra datos reales guardados en MySQL.
 
 El objetivo principal es desarrollar un portafolio digital donde las piezas se vean de forma dinámica en el navegador.
-Para conseguirlo, utilizo Flask como servidor web en Python, una base de datos MySQL llamada portafolioexamen
-y una estructura HTML con CSS interno para el diseño visual. El código HTML y CSS demuestra mi capacidad para crear un diseño limpio y organizado utilizando técnicas modernas de diseño web, como grid y flexbox. Este código proviene del examen de lenguajes de marcas.
+Para conseguirlo, utilizo Flask como servidor web en Python, y mi base de datos desde del Base de Datos examen, portafolioexamen.
+Esta base de datos está conectada a mi aplicación CRUD en Python del examen de Programación.
+
+Tambien uso una estructura HTML con CSS interno para el diseño visual. El código HTML y CSS demuestra mi capacidad para crear un diseño limpio y organizado utilizando técnicas modernas de diseño web, como grid y flexbox. Este código proviene del examen de lenguajes de marcas.
+Para que las fotos funcionen, creo una carpeta llamada «static» en el mismo directorio que este archivo Python y coloco allí una imagen llamada example.jpg. Esa es la forma más fácil de servir archivos estáticos con Flask.
 El resultado final enseña cómo el backend y el frontend trabajan juntos para generar contenido dinámico.
+
 
 Mientras realizaba esta tarea, utilicé mi aplicación CRUD del examen de programación para demostrar en directo la conexión con la base de datos y que todo funcionaba correctamente. Allí generé el quinto artículo en la base de datos para que, cuando se ejecute esta aplicación web, muestre cinco artículos en lugar de cuatro.
 """
@@ -135,8 +139,8 @@ def inicio():
         html += f'''
           <article>
             <h3>{fila[0]}</h3> <!-- Título desde la base de datos -->
-            <p><strong>Categoría:</strong> {fila[2]}</p> <!-- Categoría desde la base de datos -->
             <p>{fila[1]}</p> <!-- Descripción desde la base de datos -->
+            <p><strong>Categoría:</strong> {fila[2]}</p> <!-- Categoría desde la base de datos -->
             <img src="/static/example.jpg" alt="{fila[0]}"> <!-- Imagen de ejemplo -->
           </article>
         '''
@@ -157,7 +161,7 @@ def inicio():
 
 # Ejecución principal
 if __name__ == "__main__":
-    app.run(debug=True, port=5050) # Ejecutar en puerto 5050 para evitar conflictos
+    app.run(debug=True, port=5050) # Ejecutar en puerto 5050 para evitar conflictos. Antes usué el 5000, y me causó algunos problemas.
 
 """
 Este proyecto demuestra de forma práctica la unión de todas las materias estudiadas durante el trimestre.

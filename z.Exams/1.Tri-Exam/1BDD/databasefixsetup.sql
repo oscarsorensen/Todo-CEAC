@@ -66,4 +66,5 @@ FLUSH PRIVILEGES;
 SHOW TABLES;
 DESCRIBE categoriasportafolio;
 DESCRIBE piezasportafolio;
-SELECT * FROM vista_piezasportafolio;
+SELECT * FROM piezasportafolio_con_categoriasportafolio;
+

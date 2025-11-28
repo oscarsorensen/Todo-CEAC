@@ -39,7 +39,10 @@ def inicio():
 
 @app.route("/api")
 def api():
-  return json.dumps(personajes_json, indent=2)
+    for personaje in personajes:
+        personaje.mover()
+    return json.dumps(personajes_json, indent=2)
+
   
 if __name__ == "__main__":
   app.run(debug=True, port=5050)

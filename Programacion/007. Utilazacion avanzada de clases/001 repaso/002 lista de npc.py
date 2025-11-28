@@ -8,5 +8,9 @@ class Npc():
 personaje1 = Npc(4,3)
 personaje2 = Npc(5,4)
 
-print(personaje1)
-print(personaje2)
+personajes = []
+
+personajes.append(Npc(4,3))
+personajes.append(Npc(3,4))
+
+print(personajes)

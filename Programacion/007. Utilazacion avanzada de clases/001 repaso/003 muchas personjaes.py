@@ -8,5 +8,11 @@ class Npc():
 personaje1 = Npc(4,3)
 personaje2 = Npc(5,4)
 
-print(personaje1)
-print(personaje2)
+personajes = []
+numero_personajes = 50
+
+for i in range(0,numero_personajes):
+    personajes.append(Npc(4,3))
+
+
+print(personajes)

@@ -35,6 +35,10 @@ INSERT INTO blog (titulo, contenido, autor) VALUES
  'Organizar el tiempo, dividir el trabajo en tareas pequeñas y mantener un entorno ordenado puede ayudarte a avanzar más rápidamente en tus proyectos.',
  'Administrador');
 
+INSERT INTO blog (titulo, contenido, autor) VALUES
+('This is a selvmade test article',
+ 'This should be the 5th article in the blog. It is written in spanish but the title is in english.',
+ 'Oscar Sorensen'),
 
  -- crea usuario nuevo con contraseña
 -- creamos el nombre de usuario que queramos
